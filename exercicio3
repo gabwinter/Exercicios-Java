@@ -1,0 +1,23 @@
+package Fixacao;
+import java.util.Scanner;
+
+public class exercicio3 {
+/*
+ Crie um programa que leia o valor do dólar e faça a conversão em reais. 
+ O usuário deverá inserir o valor da cotação atual do dólar (em reais) e o valor do produto (em dólar). 
+ O programa deverá imprimir o valor em reais.
+ */
+	public static void main(String[] args) {
+		//Declarando variaveis e o Scanner;
+		Scanner ler = new Scanner(System.in);
+		float dolar, valor, convercao;
+		//Inserindo os dados;
+		System.out.println("INICIANDO CONVERÇÃO");
+		System.out.println("Digite o valor da cotação do dolar atualmente: "); dolar = ler.nextFloat();
+		System.out.println("Digite o valor que deseja converter (em dólar): "); valor = ler.nextFloat();
+		//Fazendo a converção; 
+		convercao = valor * dolar;
+		System.out.printf("Com %.2f dolares você terá R$%.2f", valor, convercao);
+		}
+
+}
