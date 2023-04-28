@@ -1,0 +1,29 @@
+package Fixacao;
+import java.util.Scanner;
+public class exercicio4 {
+/*
+ Crie um programa que leia o número de horas trabalhadas no mês e o valor da hora. 
+ O programa deverá imprimir o salário que o funcionário deverá receber, calculando o desconto de 
+ 6% do vale transporte do funcionário.
+ */
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int diasmes;
+		float salario, valorhora, horasdia, var, liquido, desconto, salariobruto;
+		//Declarando desconto
+		desconto = 0.06f;
+		//Inputando valores
+		System.out.println("Qual é o seu salario?: "); salario = ler.nextFloat();
+		System.out.println("Quantas horas você trabalha?: "); horasdia = ler.nextFloat();
+		System.out.println("Quantos dias no mês você trabalhou?: "); diasmes = ler.nextInt();
+		
+		//Contas
+		var = (salario/22)/horasdia;
+		salariobruto = (horasdia*diasmes)*var;
+		liquido = salariobruto - (salariobruto * desconto);
+		//Resultado
+		System.out.printf("Salário bruto = %.2f\n", salariobruto);
+		System.out.printf("Salário liquido = %.2f\n", liquido);
+	}
+
+}
